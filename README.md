@@ -1,6 +1,6 @@
-# Recycle Mart Dashboard
+# Beche Den Dashboard
 
-This is a dashboard application for Recycle Mart, built with Next.js 16, React 19, and TypeScript. The dashboard provides comprehensive management capabilities for various aspects of the recycling business.
+This is a dashboard application for Beche Den, built with Next.js 16, React 19, and TypeScript. The dashboard provides comprehensive management capabilities for various aspects of the recycling business.
 
 ## Features
 

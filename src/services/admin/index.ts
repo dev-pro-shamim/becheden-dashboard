@@ -23,7 +23,7 @@ export const createAdmin = async (data: any) => {
   try {
     const res = await serverFetch("/admin", {
       method: "POST",
-      body: JSON.stringify(data),
+      body: data,
     });
     if (res.success) updateTag("ADMIN-LIST");
     return res;
@@ -37,7 +37,7 @@ export const updateAdmin = async (id: string, data: any) => {
   try {
     const res = await serverFetch(`/admin/${id}`, {
       method: "PATCH",
-      body: JSON.stringify(data),
+      body: data,
     });
     if (res.success) updateTag("ADMIN-LIST");
     return res;

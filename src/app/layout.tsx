@@ -17,8 +17,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Recycle Mart - Admin Dashboard",
-  description: "Comprehensive admin dashboard for Recycle Mart. Manage users, vendors, ads, subscriptions, and system settings efficiently.",
+  title: "Beche Den - Admin Dashboard",
+  description: "Comprehensive admin dashboard for Beche Den. Manage users, vendors, ads, subscriptions, and system settings efficiently.",
   icons: {
     icon: "/favicon.ico",
   },
