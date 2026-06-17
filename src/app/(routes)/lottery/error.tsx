@@ -17,7 +17,7 @@ export default function Error({
 
   return (
     <div className="flex min-h-[500px] w-full flex-col items-center justify-center p-6">
-      <div className="relative z-10 flex max-w-md flex-col items-center justify-center gap-6 rounded-3xl border bg-background/50 p-10 text-center shadow-2xl backdrop-blur-xl">
+      <div className="relative z-10 flex max-w-md flex-col items-center justify-center gap-6 rounded-3xl border bg-background/50 p-10 text-center shadow-2xl">
         {/* Ambient Glow */}
         <div className="absolute inset-0 -z-10 bg-linear-to-tr from-destructive/20 via-transparent to-orange-500/10 opacity-50 blur-3xl" />
         

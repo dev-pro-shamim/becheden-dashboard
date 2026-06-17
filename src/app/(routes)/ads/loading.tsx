@@ -5,7 +5,7 @@ import { Loader2 } from "lucide-react";
 export default function Loading() {
   return (
     <div className="flex min-h-[500px] w-full flex-col items-center justify-center gap-6">
-      <div className="relative flex h-24 w-24 items-center justify-center rounded-3xl bg-primary/5 shadow-2xl ring-1 ring-primary/20 backdrop-blur-sm">
+      <div className="relative flex h-24 w-24 items-center justify-center rounded-3xl bg-primary/5 shadow-2xl ring-1 ring-primary/20">
         {/* Pulsing Background */}
         <div className="absolute inset-0 animate-pulse rounded-3xl bg-primary/10" />
         

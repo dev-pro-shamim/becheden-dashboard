@@ -310,7 +310,7 @@ export function ContentManager({ initialData }: ContentManagerProps) {
         <div className="grid grid-cols-12 gap-4 h-[400px] md:h-[500px]">
           {/* Main Carousel Preview */}
           <div className="col-span-8 relative rounded-2xl overflow-hidden bg-muted group border-2 border-primary/20">
-            <div className="absolute top-2 left-2 z-10 bg-black/50 text-white text-[10px] px-2 py-1 rounded-md backdrop-blur-sm">
+            <div className="absolute top-2 left-2 z-10 bg-black/50 text-white text-[10px] px-2 py-1 rounded-md">
               Carousel {currentCarouselIndex}/5
             </div>
             {(data as any)[`adImage${currentCarouselIndex}`] ? (
@@ -338,7 +338,7 @@ export function ContentManager({ initialData }: ContentManagerProps) {
           <div className="col-span-4 flex flex-col gap-4">
             {[6, 7].map((num) => (
               <div key={num} className="flex-1 relative rounded-2xl overflow-hidden bg-muted group border-2 border-primary/20">
-                <div className="absolute top-2 left-2 z-10 bg-black/50 text-white text-[10px] px-2 py-1 rounded-md backdrop-blur-sm">
+                <div className="absolute top-2 left-2 z-10 bg-black/50 text-white text-[10px] px-2 py-1 rounded-md">
                   Ad Banner {num === 6 ? 'A' : 'B'}
                 </div>
                 {(data as any)[`adImage${num}`] ? (

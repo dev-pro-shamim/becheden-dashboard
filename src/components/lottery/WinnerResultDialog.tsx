@@ -103,7 +103,7 @@ export function WinnerResultDialog({
         <Button
           variant="ghost"
           size="icon"
-          className="absolute right-4 top-4 z-50 rounded-full bg-background/20 hover:bg-background/40 backdrop-blur-md"
+          className="absolute right-4 top-4 z-50 rounded-full bg-background/20 hover:bg-background/40"
           onClick={() => onOpenChange(false)}
         >
           <X className="h-4 w-4" />
@@ -145,7 +145,7 @@ export function WinnerResultDialog({
                 </h1>
               </div>
 
-              <div className="grid md:grid-cols-2 gap-8 items-center bg-card/50 backdrop-blur-md p-8 rounded-[40px] border-4 border-yellow-400/30 shadow-2xl relative overflow-hidden group">
+              <div className="grid md:grid-cols-2 gap-8 items-center bg-card/50 p-8 rounded-[40px] border-4 border-yellow-400/30 shadow-2xl relative overflow-hidden group">
                 <div className="absolute -top-10 -right-10 w-40 h-40 bg-yellow-400/10 rounded-full blur-3xl group-hover:bg-yellow-400/20 transition-all" />
                 
                 <div className="flex flex-col items-center space-y-4">
