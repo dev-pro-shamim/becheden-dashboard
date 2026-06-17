@@ -34,7 +34,7 @@ export const updateExtraLink = async (linkKey: string, link: string) => {
   try {
     const res = await serverFetch("/extra-data/link", {
       method: "POST",
-      body: JSON.stringify({ linkKey, link }),
+      body: { linkKey, link },
     });
     if (res.success) {
       updateTag("extra-data");
@@ -49,7 +49,7 @@ export const updateExtraHeading = async (heading: string[]) => {
   try {
     const res = await serverFetch("/extra-data/heading", {
       method: "POST",
-      body: JSON.stringify({ heading }),
+      body: { heading },
     });
     if (res.success) {
       updateTag("extra-data");

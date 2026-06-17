@@ -128,7 +128,7 @@ export default function Sidebar({ isCollapsed }: SidebarProps) {
                 <Asterisk className="w-5 h-5 text-background" />
               </div>
               <span className="text-foreground font-semibold text-lg">
-                Analytics
+                Beche Den
               </span>
             </div>
           )}

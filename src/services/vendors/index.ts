@@ -36,7 +36,7 @@ export const rejectVendor = async (vendorId: string, reason: string): Promise<an
   try {
     const result = await serverFetch(`/vendor/${vendorId}/reject`, {
         method: "PATCH",
-        body: JSON.stringify({ reason }),
+        body: { reason },
       }
     );
 
@@ -53,7 +53,7 @@ export const blockVendor = async (vendorId: string, reason: string): Promise<any
   try {
     const result = await serverFetch(`/vendor/${vendorId}/block`, {
       method: "PATCH",
-      body: JSON.stringify({ reason }),
+      body: { reason },
     });
 
     if (result?.success) updateTag("VENDOR-LIST");
@@ -69,7 +69,7 @@ export const unblockVendor = async (vendorId: string, reason: string): Promise<a
   try {
     const result = await serverFetch(`/vendor/${vendorId}/unblock`, {
       method: "PATCH",
-      body: JSON.stringify({ reason }),
+      body: { reason },
     });
 
     if (result?.success) updateTag("VENDOR-LIST");

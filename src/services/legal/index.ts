@@ -22,7 +22,7 @@ export const createOrUpdatePage = async (data: {
   try {
     const res = await serverFetch("/page/create-or-update", {
       method: "PUT",
-      body: JSON.stringify(data),
+      body: data,
     });
     if (res.success) {
       updateTag(`PAGE-${data.type}`);

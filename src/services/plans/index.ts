@@ -33,7 +33,7 @@ export const createPlan = async (data: any) => {
   try {
     const res = await serverFetch("/subscription/plans", {
       method: "POST",
-      body: JSON.stringify(data),
+      body: data,
     });
     if(res.success) {updateTag("PLAN-LIST")}
     return res;
@@ -47,7 +47,7 @@ export const updatePlan = async (planId: string, data: any) => {
   try {
     const res = await serverFetch(`/subscription/plans/${planId}`, {
       method: "PATCH",
-      body: JSON.stringify(data),
+      body: data,
     });
     if(res.success) {updateTag("PLAN-LIST")}
     return res;

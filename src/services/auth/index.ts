@@ -12,7 +12,7 @@ export const signInUser = async (userData: FieldValues): Promise<any> => {
   try {
     const result = await serverFetch('/user/signin', {
       method: 'POST',
-      body: JSON.stringify(userData),
+      body: userData,
     });
 
     if (result?.success) {
@@ -64,7 +64,7 @@ export const changePassword = async (data: FieldValues): Promise<any> => {
   try {
     const result = await serverFetch('/user/change-password', {
       method: 'PATCH',
-      body: JSON.stringify(data),
+      body: data,
     });
 
     if (result?.success) {
@@ -84,7 +84,7 @@ export const forgotPassword = async (email: string): Promise<any> => {
   try {
     const result = await serverFetch('/user/forgot-password', {
       method: 'POST',
-      body: JSON.stringify({ email }),
+      body: { email },
     });
 
     if (result?.success) {
@@ -105,7 +105,7 @@ export const sendForgotPasswordOtpAgain = async (): Promise<any> => {
   try {
     const result = await serverFetch('/user/send-forgot-password-otp-again', {
       method: 'POST',
-      body: JSON.stringify({ token }),
+      body: { token },
     });
 
     return result;
@@ -122,7 +122,7 @@ export const verifyOtpForForgotPassword = async (otp: string): Promise<any> => {
   try {
     const result = await serverFetch('/user/verify-forgot-password-otp', {
       method: 'POST',
-      body: JSON.stringify({ token, otp }),
+      body: { token, otp },
     });
 
     if (result?.success) {
@@ -143,7 +143,7 @@ export const setNewPassword = async (newPassword: string): Promise<any> => {
   try {
     const result = await serverFetch('/user/reset-password', {
       method: 'POST',
-      body: JSON.stringify({ resetPasswordToken, newPassword }),
+      body: { resetPasswordToken, newPassword },
     });
 
     if (result?.success) {
@@ -190,7 +190,7 @@ export const updateUserData = async (data: { name?: string; phone?: string }): P
   try {
     const result = await serverFetch('/user/update-user-data', {
       method: 'PATCH',
-      body: JSON.stringify(data),
+      body: data,
     });
 
     if (result?.success) {

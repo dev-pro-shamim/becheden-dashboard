@@ -89,7 +89,7 @@ export const adsColumns: ColumnDef<Ad>[] = [
     accessorKey: "title",
     header: "Ad Title",
     cell: ({ row }) => (
-      <span className="font-medium max-w-[300px] truncate block">
+      <span className="font-medium max-w-75 truncate block">
         {row.original.title}
       </span>
     ),

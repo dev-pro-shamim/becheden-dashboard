@@ -23,7 +23,7 @@ export const sendReplyEmail = async (data: { email: string; subject: string; mes
   try {
     const res = await serverFetch("/contact/send-email", {
       method: "POST",
-      body: JSON.stringify(data),
+      body: data,
     });
     if (res.success) {
       updateTag("CONTACT-LIST");

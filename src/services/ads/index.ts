@@ -32,7 +32,7 @@ export const rejectAd = async (adId: string, data: { reason: string; note?: stri
   try {
     const res = await serverFetch(`/ad/${adId}/reject`, {
       method: "PATCH",
-      body: JSON.stringify(data),
+      body: data,
     });
     if (res.success) updateTag("AD-LIST");
     return res;
