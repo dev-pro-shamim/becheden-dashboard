@@ -13,6 +13,7 @@ export const signInUser = async (userData: FieldValues): Promise<any> => {
     const result = await serverFetch('/user/signin', {
       method: 'POST',
       body: userData,
+      isPublic: true,
     });
 
     if (result?.success) {
@@ -85,6 +86,7 @@ export const forgotPassword = async (email: string): Promise<any> => {
     const result = await serverFetch('/user/forgot-password', {
       method: 'POST',
       body: { email },
+      isPublic: true,
     });
 
     if (result?.success) {
@@ -106,6 +108,7 @@ export const sendForgotPasswordOtpAgain = async (): Promise<any> => {
     const result = await serverFetch('/user/send-forgot-password-otp-again', {
       method: 'POST',
       body: { token },
+      isPublic: true,
     });
 
     return result;
@@ -123,6 +126,7 @@ export const verifyOtpForForgotPassword = async (otp: string): Promise<any> => {
     const result = await serverFetch('/user/verify-forgot-password-otp', {
       method: 'POST',
       body: { token, otp },
+      isPublic: true,
     });
 
     if (result?.success) {
@@ -144,6 +148,7 @@ export const setNewPassword = async (newPassword: string): Promise<any> => {
     const result = await serverFetch('/user/reset-password', {
       method: 'POST',
       body: { resetPasswordToken, newPassword },
+      isPublic: true,
     });
 
     if (result?.success) {
