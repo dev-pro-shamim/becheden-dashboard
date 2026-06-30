@@ -21,6 +21,7 @@ export const approveVendor = async (vendorId: string) => {
   try {
     const result = await serverFetch(`/vendor/${vendorId}/approve`, {
       method: "PATCH",
+      body: {},
     });
 
     if (result?.success) updateTag("VENDOR-LIST");
